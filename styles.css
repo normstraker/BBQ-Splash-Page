@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1rem;
+  color: #404040;
+  text-align: center;
+}
+
+/* Typography */
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+}
+
+/* + combinator acts on the element adjacent (next) the first */
+h1 + p {
+  font-size: 1.3215rem;
+  font-weight: 900;
+  color: #f18119;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.3125rem;
+  margin: 0;
+}
+
+h2 + p {
+  color: #f18119;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-top: 0;
+}
+
+/* You must have flex or grid to imploy the order property */
+.top-text {
+  font-size: 0.625rem;
+  font-weight: 900;
+  color: #f18119;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  order: -1;
+  border-top: 5px solid #f18119;
+  margin-top: 0;
+  padding-top: 2px;
+  border-image: linear-gradient(to left, #ff713b, #ffa51d) 1;
+}
+
+.fine-print {
+  font-size: 0.625rem;
+  letter-spacing: 1px;
+}
+
+strong {
+  font-weight: 900;
+}
+
+/* Intro Section */
+
+.intro {
+  background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5) ),url(./images/ribs.jpg);
+  background-color: #404040;
+  /* background-blend-mode: multiply; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 0 0.5em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 50vh;
+}
+
+/* main content */
+
+.main-content {
+  padding: 2em 1em;
+}
+
+.intro > *,
+.main-content > * {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =================
+   form
+   ================= */
+
+.email-collector {
+  width: 80%;
+  max-width: 300px;
+}
+
+input,
+.btn {
+  width: 100%;
+  padding: 0.25em 0;
+  border-radius: 5px;
+}
+
+input {
+  font-family: inherit;
+  text-align: inherit;
+  margin-bottom: 0.71em;
+  padding: 0.25em;
+  border: 1px solid #404040;
+  transition: transform 0.25s;
+}
+
+input:focus {
+  transform: scale(1.02);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1em 1.5em;
+  font-size: 0.625rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 0;
+  cursor: pointer;
+}
+
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(to left, #ff713b, #ffa51d);
+  /* apply the transition property to the original style ie.not hover */
+  transition: all 0.25s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  color: black;
+  background: linear-gradient(to right, #ff713b, #ffa51d);
+  transform: scale(1.02);
+}
+
+/* =================
+   media queries 
+   ================= */
+
+@media (min-width: 500px) {
+  body {
+    font-size: 1.125rem;
+    display: flex;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2,
+  h1 + p {
+    font-size: 1.75rem;
+  }
+
+  .intro,
+  .main-content {
+    width: 50%;
+    min-height: 100vh;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
