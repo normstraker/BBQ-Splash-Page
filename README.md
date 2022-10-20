@@ -1,5 +1,4 @@
 # BBQ Splash Page
-https://normstraker.github.io/BBQ-Splash-Page/
 
 https://normstraker.github.io/BBQ-Splash-Page/
 
