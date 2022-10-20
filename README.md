@@ -1,5 +1,7 @@
 # BBQ Splash Page
 
+https://normstraker.github.io/BBQ-Splash-Page/
+
 - Responsive webpage imploying some more advanced elements and class properties
 
 ## CSS
